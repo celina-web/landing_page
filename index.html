@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌾 Mi Portafolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome (íconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header>
+            <div class="logo">
+                <i class="fas fa-seedling"></i>
+                <h1>🌾 Mi Portafolio</h1>
+            </div>
+            <nav>
+                <a href="#presentacion" class="nav-link"><i class="fas fa-user"></i> Yo</a>
+                <a href="#habilidades" class="nav-link"><i class="fas fa-tools"></i> Habilidades</a>
+                <a href="#personal" class="nav-link"><i class="fas fa-tree"></i> Granja</a>
+                <a href="#contacto" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a>
+            </nav>
+        </header>
+
+        <!-- MAIN -->
+        <main>
+
+            <!-- SECCIÓN PRESENTACIÓN -->
+            <section id="presentacion" class="presentacion">
+                <div class="avatar">
+                    <img src="assets/foto_sv.png" alt="Avatar pixel art estilo Stardew Valley, persona con sombrero de paja" />
+                </div>
+                <div class="presentacion-texto">
+                    <h1>¡Hola! Soy <span style="color:#3d6b4f;">Celina Tarn</span></h1>
+                    <div class="subtitulo"><i class="fas fa-paw"></i> Granjera digital &amp; desarrolladora</div>
+                    <p>Aspirante a desarrolladora AWS. </p>
+                    <p>Me encantan los libros, tejer y jugar al <span class="destacado">Stardew Valley</span> 🌱
+                    </p>
+                </div>
+            </section>
+
+            <!-- SECCIÓN HABILIDADES -->
+            <section id="habilidades">
+                <h2><i class="fas fa-tools" style="margin-right:8px;"></i> Habilidades</h2>
+                <div class="habilidades-grid">
+                    <div class="habilidad">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="habilidad">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="habilidad">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="habilidad">
+                        <i class="fa-brands fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="habilidad">
+                        <i class="fab fa-git-alt"></i>
+                        <span>Git &amp; GitHub</span>
+                    </div>
+                    <div class="habilidad">
+                        <i class="fa-brands fa-aws"></i>
+                        <span>AWS</span>
+                    </div>
+                    <div class="habilidad">
+                        <i class="fa-solid fa-database"></i>
+                        <span>SQL</span>
+                    </div>
+                    <div class="habilidad">
+                        <i class="fa-brands fa-php"></i>
+                        <span>PHP</span>
+                    </div>
+                    <div class="habilidad">
+                        <i class="fa-brands fa-laravel"></i>
+                        <span>Laravel</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN PERSONAL -->
+            <section id="personal" class="personal">
+            </section>
+
+            <!-- SECCIÓN CONTACTO -->
+            <section id="contacto" class="contacto">
+                <h2><i class="fas fa-envelope" style="margin-right:8px;"></i> Contacto</h2>
+                <div class="contacto-wrapper">
+
+                    <!-- Info + GitHub -->
+                    <div class="info-contacto">
+                        <p><i class="fas fa-map-pin"></i> Ciudad de Buenos Aires, Caballito</p>
+                        <p><i class="fas fa-phone-alt"></i> +54 9 11 2345-6789</p>
+                        <p><i class="fas fa-at"></i> celinatarn96@gmail.com</p>
+                        <p style="margin-top:1rem;">
+                            <a href="https://github.com/celina-web" target="_blank" class="github-link">
+                                <i class="fab fa-github"></i> Ver mi perfil en GitHub
+                            </a>
+                        </p>
+                    </div>
+
+                    <!-- Formulario -->
+                    <form class="formulario" action="#" method="post">
+                        <div class="grupo-form">
+                            <label for="nombre"><i class="fas fa-user"></i> Nombre</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+                        </div>
+                        <div class="grupo-form">
+                            <label for="email"><i class="fas fa-envelope"></i> Correo</label>
+                            <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
+                        </div>
+                        <div class="grupo-form">
+                            <label for="mensaje"><i class="fas fa-comment"></i> Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" placeholder="Contame sobre tu granja..." rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn-enviar"><i class="fas fa-paper-plane"></i> Enviar</button>
+                    </form>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <span>
+                <i class="fas fa-copyright"></i> 2026 Celina Tarn
+            </span>
+            <div class="footer-links">
+                <a href="#presentacion">Inicio</a>
+                <a href="https://github.com/celina-web" target="_blank">GitHub</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

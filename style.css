@@ -1,0 +1,493 @@
+
+    /* ---------- RESET & BASE ---------- */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Quicksand', sans-serif;
+        background: #f7efe2;
+        /* beige cálido */
+        color: #3d2c1b;
+        padding: 1.5rem;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* contenedor principal estilo "caja de madera" */
+    .container {
+        max-width: 1100px;
+        width: 100%;
+        background: #fcf6ed;
+        border-radius: 40px 40px 30px 30px;
+        box-shadow: 0 12px 0 #8b6b4f, 0 20px 30px rgba(0, 0, 0, 0.15);
+        padding: 2rem 2rem 1.5rem;
+        border: 4px solid #b28b6f;
+        transition: box-shadow 0.3s ease;
+    }
+
+    /* ---------- TIPOGRAFÍA ---------- */
+    h1,
+    h2,
+    h3,
+    .nav-link,
+    .btn,
+    .pixel {
+        font-family: 'Press Start 2P', monospace;
+        letter-spacing: 0.5px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        color: #3d6b4f;
+        text-shadow: 3px 3px 0 #d4b48c;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        color: #4a7c59;
+        border-bottom: 4px dashed #d4b48c;
+        padding-bottom: 0.4rem;
+        margin-bottom: 1.2rem;
+        display: inline-block;
+    }
+
+    h3 {
+        font-size: 0.9rem;
+        color: #5d4037;
+    }
+
+    p,
+    li,
+    label,
+    input,
+    textarea,
+    .texto-normal {
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 400;
+        line-height: 1.6;
+    }
+
+    /* ---------- HEADER & NAV ---------- */
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 3px solid #d4b48c;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+    }
+
+    .logo i {
+        font-size: 2.2rem;
+        color: #4a7c59;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 1.8rem;
+    }
+
+    .nav-link {
+        color: #5d4037;
+        text-decoration: none;
+        font-size: 0.7rem;
+        padding: 0.4rem 0;
+        border-bottom: 3px solid transparent;
+        transition: border-color 0.2s, transform 0.2s;
+        display: inline-block;
+    }
+
+    .nav-link:hover {
+        border-bottom-color: #4a7c59;
+        transform: translateY(-2px);
+    }
+
+    .nav-link i {
+        margin-right: 6px;
+        font-size: 0.9rem;
+    }
+
+    /* ---------- MAIN ---------- */
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    /* ---------- SECCIÓN PRESENTACIÓN ---------- */
+    .presentacion {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+        background: #e9dccd;
+        padding: 1.8rem 2rem;
+        border-radius: 30px;
+        border: 3px solid #b28b6f;
+        box-shadow: inset 0 0 0 4px #f7efe2;
+    }
+
+    .avatar {
+        flex: 0 0 130px;
+        text-align: center;
+    }
+
+    .avatar img {
+        width: 130px;
+        height: 130px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid #4a7c59;
+        box-shadow: 0 6px 0 #2e5a3d;
+        transition: transform 0.3s ease;
+    }
+
+    .avatar img:hover {
+        transform: scale(1.05) rotate(-3deg);
+    }
+
+    .presentacion-texto {
+        flex: 1;
+    }
+
+    .presentacion-texto h1 {
+        margin-bottom: 0.5rem;
+    }
+
+    .presentacion-texto .subtitulo {
+        font-weight: 600;
+        color: #4a7c59;
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .presentacion-texto p {
+        max-width: 500px;
+        font-size: 1rem;
+    }
+
+    .destacado {
+        background: #d4b48c;
+        padding: 0.2rem 0.6rem;
+        border-radius: 12px;
+        font-weight: 600;
+        color: #2e4057;
+    }
+
+    /* ---------- SECCIÓN HABILIDADES ---------- */
+    .habilidades-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1.2rem;
+        margin-top: 0.5rem;
+    }
+
+    .habilidad {
+        background: #f7efe2;
+        border: 3px solid #b28b6f;
+        border-radius: 24px;
+        padding: 1.2rem 0.8rem;
+        text-align: center;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        box-shadow: 0 6px 0 #8b6b4f;
+    }
+
+    .habilidad:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 0 #6d4f38;
+    }
+
+    .habilidad i {
+        font-size: 2.4rem;
+        color: #4a7c59;
+        margin-bottom: 0.4rem;
+        display: block;
+    }
+
+    .habilidad span {
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+
+    /* ---------- SECCIÓN CONTACTO + FORMULARIO ---------- */
+    .contacto {
+        background: #f7efe2;
+        border-radius: 30px;
+        padding: 1.8rem 2rem;
+        border: 3px solid #b28b6f;
+        box-shadow: inset 0 0 0 4px #e9dccd;
+    }
+
+    .contacto-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+
+    .info-contacto {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .info-contacto p {
+        margin-bottom: 0.8rem;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .info-contacto i {
+        color: #4a7c59;
+        width: 1.8rem;
+        font-size: 1.2rem;
+    }
+
+    .info-contacto .github-link {
+        display: inline-block;
+        background: #2e4057;
+        color: #f7efe2;
+        padding: 0.6rem 1.2rem;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.2s, transform 0.2s;
+        border: 2px solid #1d2c3d;
+        box-shadow: 0 4px 0 #1d2c3d;
+    }
+
+    .info-contacto .github-link:hover {
+        background: #4a7c59;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 0 #2e5a3d;
+    }
+
+    .info-contacto .github-link i {
+        margin-right: 0.5rem;
+        color: #fff;
+    }
+
+    /* formulario */
+    .formulario {
+        flex: 1.5;
+        min-width: 260px;
+    }
+
+    .grupo-form {
+        margin-bottom: 1.2rem;
+    }
+
+    .grupo-form label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+        font-size: 0.95rem;
+        color: #3d2c1b;
+    }
+
+    .grupo-form label i {
+        margin-right: 6px;
+        color: #4a7c59;
+    }
+
+    .grupo-form input,
+    .grupo-form textarea {
+        width: 100%;
+        padding: 0.7rem 1rem;
+        border: 3px solid #b28b6f;
+        border-radius: 20px;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 0.95rem;
+        background: #fffcf7;
+        transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .grupo-form input:focus,
+    .grupo-form textarea:focus {
+        outline: none;
+        border-color: #4a7c59;
+        box-shadow: 0 0 0 4px #cde0d0;
+    }
+
+    .grupo-form textarea {
+        resize: vertical;
+        min-height: 90px;
+    }
+
+    .btn-enviar {
+        background: #4a7c59;
+        color: #fff;
+        border: none;
+        padding: 0.8rem 2rem;
+        border-radius: 40px;
+        font-family: 'Press Start 2P', monospace;
+        font-size: 0.75rem;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+        box-shadow: 0 6px 0 #2e5a3d;
+        border: 2px solid #2e5a3d;
+        letter-spacing: 0.5px;
+    }
+
+    .btn-enviar:hover {
+        background: #3d6b4f;
+        transform: translateY(-3px);
+        box-shadow: 0 9px 0 #1f402b;
+    }
+
+    .btn-enviar:active {
+        transform: translateY(4px);
+        box-shadow: 0 2px 0 #1f402b;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+        margin-top: 2.5rem;
+        padding-top: 1.2rem;
+        border-top: 3px solid #d4b48c;
+        text-align: center;
+        font-size: 0.85rem;
+        color: #5d4037;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    footer .footer-links a {
+        color: #4a7c59;
+        margin: 0 0.6rem;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.2s;
+    }
+
+    footer .footer-links a:hover {
+        color: #2e5a3d;
+        text-decoration: underline;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 700px) {
+        .container {
+            padding: 1.2rem;
+        }
+
+        header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+
+        nav {
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        .presentacion {
+            flex-direction: column;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .presentacion-texto p {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .personal-grid {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .personal-grid img {
+            max-width: 100%;
+        }
+
+        .contacto-wrapper {
+            flex-direction: column;
+        }
+
+        .info-contacto {
+            width: 100%;
+        }
+
+        .formulario {
+            width: 100%;
+        }
+
+        footer {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.2rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .container {
+            padding: 0.8rem;
+            border-radius: 24px;
+        }
+
+        nav {
+            gap: 0.6rem 1rem;
+        }
+
+        .nav-link {
+            font-size: 0.6rem;
+        }
+
+        .avatar img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .habilidades-grid {
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+        }
+    }
+
+    /* ---------- ANIMACIÓN EXTRA (pixel parpadeo) ---------- */
+    @keyframes parpadeo {
+        0%,
+        100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.3;
+        }
+    }
+
+    .pixel-parpadeo {
+        animation: parpadeo 1.8s infinite;
+    }
+
+    .logo i {
+        animation: parpadeo 2.4s infinite;
+    }
+
+    /* transición suave en enlaces y botones */
+    a,
+    .btn-enviar,
+    .habilidad,
+    .avatar img,
+    .personal-grid img {
+        transition: all 0.25s ease;
+    }

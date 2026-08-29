@@ -26,16 +26,16 @@
                 <i class="fas fa-seedling"></i>
                 <h1>🌾 Mi Portafolio</h1>
             </div>
-            <nav>
+            <nav aria-label="Navegación principal">
                 <a href="#presentacion" class="nav-link"><i class="fas fa-user"></i> Yo</a>
                 <a href="#habilidades" class="nav-link"><i class="fas fa-tools"></i> Habilidades</a>
-                <a href="#personal" class="nav-link"><i class="fas fa-tree"></i> Granja</a>
+                <a href="#personal" class="nav-link"><i class="fas fa-tree"></i> Proyectos</a>
                 <a href="#contacto" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a>
             </nav>
         </header>
 
         <!-- MAIN -->
-        <main>
+        <main role="main">
 
             <!-- SECCIÓN PRESENTACIÓN -->
             <section id="presentacion" class="presentacion">
@@ -96,6 +96,42 @@
 
             <!-- SECCIÓN PERSONAL -->
             <section id="personal" class="personal">
+                <h2><i class="fas fa-code" style="margin-right:8px;"></i> Mis proyectos</h2>
+                <div class="proyectos-grid">
+                    <!-- Card 1 -->
+                    <div class="proyecto-card">
+                        <div class="proyecto-icono">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h3>Gestión de Gimnasio Android</h3>
+                        <p>
+                            Aplicación móvil nativa para la gestión de socios, rutinas y pagos en gimnasios. Desarrollada en Android Studio.
+                        </p>
+                        <span class="proyecto-tag">Android • Kotlin</span>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="proyecto-card">
+                        <div class="proyecto-icono">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Gestión de Gimnasio Desktop</h3>
+                        <p>
+                            Sistema de escritorio para administración de gimnasios. Incluye control de accesos, reportes y gestión de empleados.
+                        </p>
+                        <span class="proyecto-tag">C# • .NET • SQL Server</span>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="proyecto-card">
+                        <div class="proyecto-icono">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Calculadora científica</h3>
+                        <p>
+                            Calculadora interactiva con interfaz amigable, soporte para operaciones básicas y funciones trigonométricas.
+                        </p>
+                        <span class="proyecto-tag">JavaScript • HTML • CSS</span>
+                    </div>
+                </div>
             </section>
 
             <!-- SECCIÓN CONTACTO -->
